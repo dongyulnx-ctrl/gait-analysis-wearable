@@ -1,0 +1,45 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.idea/
+.venv/
+venv/
+*.log
+
+# ===== 云凭证 / 敏感信息（切勿提交）=====
+iotda_config.json
+*.pem
+*账号密码*
+*_config.json
+
+# ===== Keil 编译产物 =====
+OBJ/
+Listings/
+DebugConfig/
+*.uvguix.*
+*.o
+*.hex
+*.axf
+*.map
+*.lnp
+*.dep
+*.crf
+*.htm
+*.bak
+*.sct
+*.scvd
+*.lst
+*.build_log.htm
+JLinkSettings.ini
+Nu_Link_Driver.ini
+.vscode/
+
+# ===== 原始测试数据（示例数据除外）=====
+*.csv
+!software/示例数据/*.csv
+
+# ===== 系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
