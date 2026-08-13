@@ -124,4 +124,4 @@ python huawei_show_v仿真.py
 
 ## 作者
 
-董鸿儒（Hongru Dong）
+dongyulnx-ctrl
