@@ -31,6 +31,8 @@
                                                                        └────────────────┘
 ```
 
+![硬件框图](assets/hardware-architecture.png)
+
 ## 目录结构
 
 ```
@@ -43,6 +45,7 @@ gait-analysis-wearable/
 │       ├── EMG_V02.PcbDoc  #   EMG 采集板 PCB
 │       ├── *.epro2         #   主板工程（嘉立创EDA）
 │       └── BOM_*.xlsx      #   物料清单
+├── assets/                 # README 配图
 └── software/
     ├── huawei_shwo_v1.7.py   # 上位机主程序（连华为云 OBS 实时接收）
     ├── huawei_show_v仿真.py  # 仿真版（读取本地 CSV 回放，不连云）
@@ -66,11 +69,17 @@ gait-analysis-wearable/
 
 核心代码位于 `USER/`（`main.c`、`fusion_send.c` 数据融合与打包、`emg_feature.c` / `imu_feature.c` 特征提取、`adc.c` 压力采集等）。
 
+![PCB 主板设计](assets/pcb-board.png)
+
 ## 软件部分
 
 - **上位机**：PyQt5 + pyqtgraph，多线程架构（OBS 下载线程 / 推理线程 / UI 刷新）
 - **云端链路**：华为云 OBS Python SDK（`esdk-obs-python`），实时监听桶内新文件并解析
 - **模型**：CNN-Transformer（1D CNN 特征提取 + Transformer Encoder + 全连接分类）
+
+![上位机界面](assets/ui-dashboard.png)
+
+![模型结构](assets/model-transformer.png)
 
 ## 快速开始
 
